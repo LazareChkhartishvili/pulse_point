@@ -41,3 +41,92 @@ body {
   height: 3px;
   background-color: var(--gold);
 }
+
+/* ნავიგაცია */
+.header-nav-links {
+  transition: color 0.18s;
+}
+.header-nav-links:hover {
+  color: #b8860b;
+}
+
+/* ღილაკები */
+.cta-btn,
+.game-btn {
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cta-btn:hover,
+.game-btn:hover {
+  transform: scale(1.08) rotate(-2deg);
+}
+.cta-btn:active,
+.game-btn:active {
+  transform: scale(0.96);
+}
+
+/* Why choose us ბარათები */
+.why-choose-us-content > div {
+  transition: none;
+}
+.why-choose-us-content > div:hover {
+  /* აღარაფერი */
+}
+.why-choose-us-content > div img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.why-choose-us-content > div:hover img {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* პარტნიორების ლოგოები */
+.partner-items img {
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.partner-items:hover img {
+  transform: scale(1.1) rotate(6deg);
+}
+
+/* ლოგო (header) */
+.logo {
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+.logo:hover {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* --- ENTRANCE ANIMATIONS --- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  /* transform არ გამოიყენება, რომ layout არ დაირღვეს */
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
