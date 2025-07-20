@@ -1,0 +1,203 @@
+footer {
+  background-color: var(--blue);
+  padding-top: 32px;
+}
+#laliga {
+  color: var(--white);
+}
+.bonus-terms {
+  margin-inline: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-blue);
+  padding: 20px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bonus-terms h4 {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 0%;
+  text-transform: uppercase;
+}
+
+/* partners styles (Mobile Default) */
+.partners {
+  display: flex;
+
+  flex-direction: column; /* ქვევით */
+  align-items: center; /* ცენტრში ყველა დივი */
+  gap: 16px;
+  margin-inline: 24px;
+  border-top: 1px solid var(--light-blue);
+  margin-top: 32px;
+  padding-top: 32px;
+  margin-bottom: 40px;
+}
+#laliga-partner {
+  width: 230px;
+}
+.partner-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+}
+.other-partners {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+.other-partners .partner-items {
+  flex-direction: column;
+}
+.partner-items:first-child {
+  justify-content: center; /* ცენტრში */
+  flex-direction: column; /* სურათი და ტექსტი column-ში */
+  align-items: center;
+  text-align: center;
+}
+
+.other-partners .partner-items h5 {
+  display: block;
+  color: var(--light-blue);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.other-partners .partner-items h5 {
+  display: none;
+}
+
+.partner-items small {
+  color: var(--light-blue);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0%;
+}
+
+/* sub footer styles */
+.footer-aditional-info {
+  padding-inline: 24px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--dark-blue);
+}
+
+.footer-aditional-info p {
+  color: rgba(144, 148, 156, 1);
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.footer-aditional-info p a {
+  text-decoration: underline;
+  color: rgba(144, 148, 156, 1);
+  font-weight: 700;
+}
+
+.footer-aditional-info-content1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.footer-aditional-info-content1 p {
+  color: rgba(144, 148, 156, 1);
+}
+
+.footer-aditional-info-content1 p a {
+  text-decoration: underline;
+  color: rgba(144, 148, 156, 1);
+  font-weight: 700;
+}
+
+.footer-aditional-info-content1 a {
+  color: rgba(144, 148, 156, 1);
+  font-weight: 700;
+}
+
+.footer-aditional-info-content1 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Tablet: 600px+ */
+@media (min-width: 678px) {
+  .partners {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .other-partners {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 0;
+  }
+  .other-partners .partner-items h5 {
+    display: block;
+  }
+  /* ყველა partner-items column */
+  .partner-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .partner-items div small {
+    margin-inline: auto;
+  }
+
+  /* ყველა partner-items-ში h5 გამოჩნდეს */
+  .partner-items h5 {
+    display: block;
+    color: var(--light-blue);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+  }
+  .footer-aditional-info-content1 {
+    flex-direction: row;
+  }
+  .footer-aditional-info {
+    text-align: start;
+  }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+  .partner-items {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: start;
+  }
+  .partner-items:first-child {
+    flex-direction: row;
+    text-align: start;
+  }
+  .partner-items:not(:first-child) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

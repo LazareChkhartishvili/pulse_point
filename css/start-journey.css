@@ -1,0 +1,25 @@
+.start-journey {
+  display: flex;
+  flex-direction: column;
+  margin-top: 88px;
+  padding-inline: 24px;
+}
+
+.start-journey h3 {
+  font-weight: 700;
+  color: var(--light-blue);
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.start-journey p {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  color: var(--light-blue);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
