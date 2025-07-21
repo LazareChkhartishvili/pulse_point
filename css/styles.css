@@ -68,9 +68,7 @@ body {
 .why-choose-us-content > div {
   transition: none;
 }
-.why-choose-us-content > div:hover {
-  /* აღარაფერი */
-}
+
 .why-choose-us-content > div img {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -91,15 +89,10 @@ body {
   transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
 }
-.logo:hover {
-  transform: scale(1.08) rotate(-4deg);
-}
 
-/* --- ENTRANCE ANIMATIONS --- */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  /* transform არ გამოიყენება, რომ layout არ დაირღვეს */
 }
 @keyframes fadeIn {
   to {
@@ -129,4 +122,28 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Fade-in + Slide-up animation for js-fade-in */
+.js-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.js-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Logo slide-in + fade-in animation */
+.js-logo-in {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.9);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.js-logo-in.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
